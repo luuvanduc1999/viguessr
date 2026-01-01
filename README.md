@@ -1,1 +1,1 @@
-https://viguessr.me/
+https://viguessr.com/
