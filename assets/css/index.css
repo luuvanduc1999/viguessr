@@ -14,7 +14,7 @@
 .next-btn {
     margin-top: 10px;
     background: linear-gradient(135deg, #057f6d, #024d42);
-    border: #05A38C 5px solid;
+    border: none;
     border-radius: 12px;
     padding: 12px 12px;
     cursor: pointer;
@@ -24,10 +24,15 @@
     width: 100%;
 }
 
+.next-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #068a75, #025a4a);
+}
+
 .next-text {
     font-family: 'Jersey 15', cursive;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 20px;
+    line-height: 20px;
     color: #e6f4e6;
 }
 
@@ -47,11 +52,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 12px;
+            background-color: #1d2c29;
+            padding: 32px;
+            border-radius: 24px;
             text-align: center;
             z-index: 10000;
+            border: 2px solid #24453a;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            color: #e6f4e6;
+            font-family: 'Jersey 15', cursive;
+            font-size: 20px;
+            line-height: 20px;
         }       
         
         body {
@@ -190,21 +201,21 @@
             max-width: 1064px;
             margin: 0 auto;
             background-color: #1d2c29;
-            border: 8px solid #24453a;
+            border: 2px solid #24453a;
             border-radius: 24px;
-            padding: 16px;
+            padding: 0;
             margin-bottom: 100px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
         .score-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #1d2c29;
-            border: 8px solid #24453a;
-            border-radius: 24px 24px 0px 0px;
-            padding: 12px 16px;
-            margin: -24px -24px 0 -24px;
+            background-color: #24453a;
+            padding: 16px 24px;
+            border-bottom: 1px solid #2f5a4d;
         }
         
         .score-text {
@@ -262,15 +273,18 @@
         .game-content {
             display: flex;
             gap: 24px;
-            margin-top: 24px;
+            padding: 24px;
             flex-direction: column;
         }
         
         .pano, .how-to-play {
-            background-color: #1a1a1a;
-            border-radius: 8px;
+            background-color: #15201d;
+            border-radius: 16px;
             padding: 16px;
             flex: 1;
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2f5a4d;
         }
         
         .how-title {
@@ -708,14 +722,13 @@
             }
             
             .game-section {
-                padding: 32px;
                 margin-left: 188px;
                 margin-right: 188px;
                 margin-bottom: 156px;
             }
             
-            .score-header {
-                margin: -40px -40px 0 -40px;
+            .game-content {
+                padding: 32px;
             }
             
             .score-text {

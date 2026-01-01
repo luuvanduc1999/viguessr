@@ -31,56 +31,79 @@ body {
 }
 
 .modal-content {
-    background-color: #24453D;
+    background-color: #1d2c29;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);    padding: 20px;
-    border-radius: 12px;
+    transform: translate(-50%, -50%);
+    padding: 32px;
+    border-radius: 24px;
     width: 90%;
     max-width: 600px;
     text-align: center;
     color: #e6f4e6;
     position: relative;
-    border: #05A38C 5px solid;
+    border: 2px solid #24453a;
     font-family: 'Jersey 15', cursive;
     font-size: 20px;
     line-height: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .modal-donate {
-    background-color: #24453D;
+    background-color: #1d2c29;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);    padding: 20px;
-    border-radius: 12px;
+    transform: translate(-50%, -50%);
+    padding: 32px;
+    border-radius: 24px;
     width: 90%;
     max-width: 300px;
     text-align: center;
     color: #e6f4e6;
     position: relative;
-    border: #05A38C 5px solid;
+    border: 2px solid #24453a;
     font-family: 'Jersey 15', cursive;
     font-size: 20px;
     line-height: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .back-btn {
-    background: linear-gradient(135deg, #057f6d, #024d42);
-    border: none;
-    border-radius: 12px;
-    padding: 8px;
+    background: rgba(29, 44, 41, 0.6);
+    border: 2px solid #5dd5a2;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #5dd5a2;
+}
+
+.back-btn:hover {
+    background: rgba(93, 213, 162, 0.2);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(93, 213, 162, 0.3);
+    border-color: #fff;
+    color: #fff;
+}
+
+.back-btn svg {
+    width: 24px;
+    height: 24px;
 }
 
 
 .next-btn {
     margin-top: 10px;
     background: linear-gradient(135deg, #057f6d, #024d42);
-    border: #05A38C 5px solid;
+    border: none;
     border-radius: 12px;
     padding: 12px 12px;
     cursor: pointer;
@@ -90,10 +113,15 @@ body {
     width: 100%;
 }
 
+.next-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #068a75, #025a4a);
+}
+
 .next-text {
     font-family: 'Jersey 15', cursive;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 20px;
+    line-height: 20px;
     color: #e6f4e6;
 }
 
@@ -105,8 +133,11 @@ body {
     width: 100%;
     height: 300px;
     margin: 20px 0;
-    border-radius: 8px;
-    border: 2px solid #ddd;
+    border-radius: 16px;
+    border: 1px solid #2f5a4d;
+    background-color: #15201d;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 
@@ -240,21 +271,21 @@ body {
     max-width: 1564px;
     margin: 0 auto;
     background-color: #1d2c29;
-    border: 8px solid #24453a;
+    border: 2px solid #24453a;
     border-radius: 24px;
-    padding: 16px;
+    padding: 0;
     margin-bottom: 100px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .score-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1d2c29;
-    border: 8px solid #24453a;
-    border-radius: 24px 24px 0px 0px;
-    padding: 12px 16px;
-    margin: -24px -24px 0 -24px;
+    background-color: #24453a;
+    padding: 16px 24px;
+    border-bottom: 1px solid #2f5a4d;
 }
 
 .score-text {
@@ -305,14 +336,17 @@ body {
 .game-content {
     display: flex;
     gap: 24px;
-    margin-top: 24px;
+    padding: 24px;
     flex-direction: column;
 }
 
 .pano {
-    background-color: #1a1a1a;
-    border-radius: 8px;
+    background-color: #15201d;
+    border-radius: 16px;
     flex: 1;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2f5a4d;
 }
 
 .how-title {
@@ -387,14 +421,16 @@ body {
 }
 
 .disclaimer {
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    padding: 16px;
+    background-color: #15201d;
+    border-radius: 16px;
+    padding: 0;
     display: flex;
     gap: 12px;
     align-items: flex-start;
     width: 100%;
     aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid #2f5a4d;
 }
 
 .checkbox {
@@ -736,13 +772,12 @@ body {
         line-height: 24px;
     }
     .game-section {
-        padding: 32px;
         margin-left: 188px;
         margin-right: 188px;
         margin-bottom: 156px;
     }
-    .score-header {
-        margin: -40px -40px 0 -40px;
+    .game-content {
+        padding: 32px;
     }
     .score-text {
         font-size: 32px;
